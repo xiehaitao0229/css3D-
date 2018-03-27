@@ -75,7 +75,7 @@ $('#container').on('touchend', function(event) {
             浏览器重绘之前调用。*/
 window.addEventListener('deviceorientation', function(event) {
     var gamma = event.gamma;
-    if (Math.abs(gamma) > 1) {
+    if (Math.abs(gamma) > 10) {
         flag = false;
         box1.style.transform = 'rotateY(' + gamma * 3 + 'deg)';
     } else {
